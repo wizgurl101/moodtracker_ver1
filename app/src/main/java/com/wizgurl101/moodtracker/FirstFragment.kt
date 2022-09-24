@@ -1,4 +1,4 @@
-package com.example.moodtracker_ver1
+package com.wizgurl101.moodtracker
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.moodtracker_ver1.databinding.FragmentFirstBinding
+import com.wizgurl101.moodtracker.databinding.FragmentFirstBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.

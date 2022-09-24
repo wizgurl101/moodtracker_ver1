@@ -1,4 +1,4 @@
-package com.example.moodtracker_ver1
+package com.wizgurl101.moodtracker
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,9 +6,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import com.wizgurl101.moodtracker.SelectMood
 
 private const val TAG = "MainActivity"
-const val EXTRA_MESSAGE = "com.example.moodtracker_ver1_selectmood"
+const val EXTRA_MESSAGE = "com.wizgurl101.moodtracker_selectmood"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var userEmail: String

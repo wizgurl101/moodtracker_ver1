@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "MoodTracker_ver1"
+rootProject.name = "moodtracker"
 include ':app'

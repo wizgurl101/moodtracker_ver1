@@ -1,4 +1,4 @@
-package com.example.moodtracker_ver1
+package com.wizgurl101.moodtracker
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -7,7 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.moodtracker_ver1.databinding.ActivitySelectMoodBinding
+import com.wizgurl101.moodtracker.databinding.ActivitySelectMoodBinding
 
 class SelectMood : AppCompatActivity() {
 
