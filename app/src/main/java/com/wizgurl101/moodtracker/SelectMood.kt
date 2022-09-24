@@ -8,6 +8,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.wizgurl101.moodtracker.databinding.ActivitySelectMoodBinding
 import java.time.Instant
 import java.time.format.DateTimeFormatter
@@ -16,6 +18,7 @@ private const val TAG = "SelectMood"
 
 class SelectMood : AppCompatActivity() {
     private lateinit var binding: ActivitySelectMoodBinding
+    private lateinit var userId: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,8 @@ class SelectMood : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
+
+        userId = intent.getStringExtra(EXTRA_USERID).toString()
 
         val buttonMood1: Button = findViewById(R.id.bMood1)
         val buttonMood2: Button = findViewById(R.id.bMood1)
@@ -53,15 +58,13 @@ class SelectMood : AppCompatActivity() {
             .format(Instant.now())
 
         val data = {
-            "moodType" to type,
+            "moodType" to type
             "date" to currentDate
+            "userId" to userId
         }
 
-//        val db = Firebase.firestore()
-//
-//        db.collection("mood")
-//            .add(data)
-//            .addOnSuccessListener(docReference -> {})
-    }
+        val db = Firebase.firestore
 
+        db.collection("mood").add(data)
+}
 }
