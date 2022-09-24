@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import com.google.firebase.FirebaseApp
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.wizgurl101.moodtracker.SelectMood
 
 private const val TAG = "MainActivity"
@@ -17,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_main)
 
         userEmail = findViewById<View?>(R.id.etEmail).toString()
@@ -29,6 +33,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SelectMood::class.java).apply {
                 putExtra(EXTRA_MESSAGE, "")
             }
+
+            // test if this app can connect to firebase
+            val db = Firebase.firestore
+            db.collection("user")
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        Log.d(TAG, "${document.id} => ${document.data}")
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.w(TAG, "Error getting documents.", exception)
+                }
             startActivity(intent)
         }
     }
