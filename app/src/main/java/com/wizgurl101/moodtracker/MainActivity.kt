@@ -1,4 +1,4 @@
-package com.example.moodtracker_ver1
+package com.wizgurl101.moodtracker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.moodtracker_ver1'
+    namespace 'com.wizgurl101.moodtracker'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.moodtracker_ver1"
+        applicationId "com.wizgurl101.moodtracker"
         minSdk 26
         targetSdk 32
         versionCode 1
