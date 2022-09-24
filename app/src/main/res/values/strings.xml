@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MoodTracker_ver1</string>
+    <string name="app_name">moodtracker</string>
     <string name="title_activity_select_mood">selectMood</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
