@@ -9,7 +9,7 @@ import android.widget.Button
 import com.wizgurl101.moodtracker.SelectMood
 
 private const val TAG = "MainActivity"
-const val EXTRA_MESSAGE = "com.wizgurl101.moodtracker_selectmood"
+const val EXTRA_USERID = "userId"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var userEmail: String
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val button: Button = findViewById(R.id.bLogin)
         button.setOnClickListener {
             val intent = Intent(this, SelectMood::class.java).apply {
-                putExtra(EXTRA_MESSAGE, "")
+                putExtra(EXTRA_USERID, "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")
             }
             startActivity(intent)
         }
