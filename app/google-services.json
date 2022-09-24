@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "417326788589",
+    "project_id": "moodtracker-cf2cd",
+    "storage_bucket": "moodtracker-cf2cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417326788589:android:c770b01f5bdced60edc1e4",
+        "android_client_info": {
+          "package_name": "com.wizgurl101.moodtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417326788589-6tavk0v1jk1tf8i7qjnu5beho37qdbtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_fLqVSEZ7vDCsOH4w2kfjKw43RNzSx5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417326788589-6tavk0v1jk1tf8i7qjnu5beho37qdbtu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
